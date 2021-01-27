@@ -17,7 +17,13 @@ const sendHttpRequest = (method, url, data) => {
       xhr.setRequestHeader("Content-Type", "application/json");
     }
 
-    xhr.onload = () => resolve(xhr.response);
+    xhr.onload = () => {
+      if (xhr.status >= 400) {
+        reject(xhr.response);
+      } else {
+        resolve(xhr.response);
+      }
+    };
 
     xhr.onerror = () => reject("Something went wrong!");
 
