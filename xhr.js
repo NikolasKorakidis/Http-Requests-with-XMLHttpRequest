@@ -19,7 +19,11 @@ const getData = () => {
   //   Now if we inspect our website and check our action we will see our console.log
 };
 
-const sendData = () => {};
+const sendData = () => {
+  // So here now we could actually do the same thing and it would work just fine, but we have a small issue. At this moment we will reuse tons of the same code. Sow aht we will do we will make a function to deal with all kind of requests and we will pass on each request we want out parameters and that will do!
+  // I am gonna do the same think on the xhr2.js file!
+  //   Dont forget to change the script in your index.html to the xhr2
+};
 
 getBtn.addEventListener("click", getData);
 postBtn.addEventListener("click", sendData);
